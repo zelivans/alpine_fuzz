@@ -1,0 +1,3 @@
+[submodule "apk-tools"]
+    path = apk-tools
+    url = https://github.com/zelivans/apk-tools.git
