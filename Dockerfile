@@ -21,5 +21,5 @@ VOLUME /outdir
 
 # Make sure afl-tmin is ran on corpus. To do that - run with --entrypoint "/bin/sh" and run
 # for i in /corpus/*; do afl-tmin -i $i -o /corpus/$i.min -- /apk-tools/src/apk fz @@; done;
-# Todo 2: multiple instances
-ENTRYPOINT ["afl-fuzz", "-i", "/corpus/actual", "-o" ,"/outdir/", "/apk-tools/src/apk fz @@"]
+# Todo 2: multiple instances. parallel can be done with -M 01 and -S 02...
+#ENTRYPOINT ["afl-fuzz", "-i", "/corpus/", "-o" ,"/outdir/", "/apk-tools/src/apk", "fz", "@@"]
